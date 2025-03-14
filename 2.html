@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Ellipse & CSS Grid Resume</title>
+    <style>
+        .ellipse-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .ellipse {
+            width: 300px;
+            height: 200px;
+            border-radius: 50%;
+            animation: gradientShift 5s infinite alternate;
+            background: radial-gradient(
+                circle at 50% 50%,
+                #ff6b6b,
+                #4ecdc4,
+                #45b7af
+            );
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 椭圆动画部分 -->
+    <div class="ellipse-container">
+        <div class="ellipse"></div>
+    </div>
+
+    <!-- 简历内容 -->
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            .resume {
+                display: grid;
+                grid-template-columns: 120px 1fr 120px 1fr 150px;
+                max-width: 800px;
+                margin: 20px auto;
+                border: 1px solid #ccc;
+                padding: 5px;
+            }
+            
+            .header {
+                grid-column: 1 / -1;
+                text-align: center;
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+            }
+            
+            .section {
+                padding: 8px;
+                border-bottom: 1px solid #ccc;
+            }
+            
+            .full-width {
+                grid-column: 1 / -1;
+            }
+            
+            .photo {
+                grid-row: 2 / 4;
+                grid-column: 5;
+                align-self: center;
+                padding: 5px;
+            }
+            
+            ul, ol {
+                margin: 5px 0;
+                padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="resume">
+            <div class="header full-width">
+                <h1>个人简历</h1>
+            </div>
+    
+            <!-- Personal Info -->
+            <div class="section">姓 名</div>
+            <div class="section">简小丽</div>
+            <div class="section">年 龄</div>
+            <div class="section">26</div>
+            <div class="photo">
+            <img src="https://img.picui.cn/free/2025/03/14/67d42580b18ac.jpg" alt="头像" style="width:100%">
+            </div>
+    
+            <div class="section">性 别</div>
+            <div class="section">女</div>
+            <div class="section">地 址</div>
+            <div class="section">湖南 长沙 岳麓区</div>
+    
+            <div class="section">电 话</div>
+            <div class="section">135-0000-0000</div>
+            <div class="section">婚姻状况</div>
+            <div class="section">已婚</div>
+    
+            <!-- Job Objective -->
+            <div class="section">求职意向</div>
+            <div class="section full-width" style="grid-column: 2 / -1">区域经理</div>
+    
+            <!-- Work Experience -->
+            <div class="section">工作经历</div>
+            <div class="section full-width" style="grid-column: 2 / -1">
+                <ul>
+                    <li>一、社区服务站慢病管理员
+                        <ol>
+                            <li>负责为客户进行体检并解读体检结果</li>
+                            <li>评估客户的健康状况和所患疾病危险性;进行健康咨询与指导</li>
+                            <li>对患者进行糖尿病、高血压检测工作</li>
+                        </ol>
+                    </li>
+                    <li>二、药店店员(工作经验四年)
+                        <ol>
+                            <li>负责接待顾客的咨询,了解顾客的需求并达成销售</li>
+                            <li>负责做好货品销售记录、盘点、账目核对等工作,按规定完成各项销售统计工作</li>
+                            <li>完成商品的来货验收、上架陈列摆放、补货、退货、防损等日常营业工作</li>
+                            <li>做好所负责区域的卫生清洁工作</li>
+                            <li>了解公司下达的销售任务指标,进行销售任务的分解</li>
+                            <li>对商品的价格、产地等做到了如指掌</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="section">教育经历</div>
+            <div class="section full-width" style="grid-column: 2 / -1">中专学历 (本人学历不高,正在就读成人高考)</div>
+    
+            <div class="section">社会关系</div>
+            <div class="section full-width" style="grid-column: 2 / -1">
+                <ul>
+                    <li>家人从事教育行业老师和学校领导等工作</li>
+                    <li>本人对象与很多老板是朋友关系,具有一定的社会关系</li>
+                </ul>
+            </div>
+    
+            <div class="section">自我评价</div>
+            <div class="section full-width" style="grid-column: 2 / -1">
+                <ul>
+                    <li>对于市场具有一定的观察诊断能力,了解当地市场人流量、竞争情况、消费喜好、消费者分布情况</li>
+                    <li>对于产品、人员、价格等具有一定的管理能力</li>
+                    <li>对于营销知识及品牌知识等具有一定的了解</li>
+                    <li>具有一定的会预测、分析、洞察和规划布局等能力</li>
+                    <li>能快速了解公司营销方案并执行等能力</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    </html>
+    
+      
+</html>
