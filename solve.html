@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quadratic Equation Solver</title>
+</head>
+<body>
+
+<script>
+     //(1)Get coefficient a, b, and c from the user using prompt
+     let a_str = prompt("Enter the coefficient a:");
+     let b_str = prompt("Enter the coefficient b:");
+     let c_str = prompt("Enter the coefficient c:");
+
+
+     // (2) Convert the input strings to numbers using parseFloat
+     let a = parseFloat(a_str);
+     let b = parseFloat(b_str);
+     let c = parseFloat(c_str);
+
+     // (3) Compute delta = b*b - 4*a*c
+  let delta = b*b - 4*a*c;
+
+  // Check if delta is non-negative and a is positive
+  if (delta >= 0 && a > 0) {
+    // (4) Compute x1 and x2
+    let x1 = (-b + Math.sqrt(delta)) / (2*a);
+    let x2 = (-b - Math.sqrt(delta)) / (2*a);
+
+    // (5) Display the results using alert
+    alert("The roots are x1 = " + x1 + " and x2 = " + x2);
+
+    // (6) Display the results using console.log
+    console.log("The roots are x1 = " + x1 + " and x2 = " + x2);
+  } else {
+    // Handle cases where delta is negative or a is not positive
+    if (delta < 0) {
+      alert("The discriminant (delta) is negative.  There are no real roots.");
+      console.log("The discriminant (delta) is negative. There are no real roots.");
+    } else {
+      alert("The coefficient 'a' must be greater than 0.");
+      console.log("The coefficient 'a' must be greater than 0.");
+    }
+  }
+</script>
+
+</body>
+</html>
